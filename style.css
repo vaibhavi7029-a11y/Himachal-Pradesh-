@@ -1,1 +1,20 @@
+.light-mode {
+  background: #f4f4f4;
+  color: black;
+}
 
+.light-mode .card {
+  background: white;
+  color: black;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
