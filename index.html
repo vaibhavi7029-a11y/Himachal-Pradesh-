@@ -1,1 +1,184 @@
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Explore Himachal Pradesh</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #001f3f, #003366);
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1626820687473-4f2b5756fa0d') no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    background: linear-gradient(45deg, #00c6ff, #ffffff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #00c6ff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 280px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+/* Gallery */
+.gallery img {
+    width: 300px;
+    margin: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #000814;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hero -->
+<div class="hero">
+    <h1 id="typing"></h1>
+    <p>Discover the Land of Snow & Serenity</p>
+    <button onclick="scrollToPlaces()">Explore Now</button>
+</div>
+
+<!-- About -->
+<div class="section">
+    <h2>About Himachal Pradesh</h2>
+    <p>Himachal Pradesh is a beautiful northern Indian state known for its breathtaking mountains, valleys, temples, and adventure tourism.</p>
+</div>
+
+<!-- Famous Places -->
+<div class="section" id="places">
+    <h2>Famous Places</h2>
+    <div class="card-container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634">
+            <h3>Manali</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2">
+            <h3>Shimla</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766">
+            <h3>Dharamshala</h3>
+        </div>
+
+    </div>
+</div>
+
+<!-- Gallery -->
+<div class="section">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Explore Himachal Pradesh | Created by Vaibhavi 💜</p>
+</footer>
+
+<script>
+// Typing Effect
+const text = "Welcome to Himachal Pradesh";
+let i = 0;
+
+function typeEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 80);
+    }
+}
+typeEffect();
+
+// Scroll Function
+function scrollToPlaces() {
+    document.getElementById("places").scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+</body>
+</html>
